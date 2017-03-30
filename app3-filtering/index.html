@@ -1,6 +1,20 @@
-<html>
-	<body>
-		Something
+<html lang="en" ng-app="myApp3">
+	<body ng-controller="filterController">
+		Filter results by (name, email, or phone number)
+
+		<!-- This is just to test app -->
+		<!-- <p>{{test}}</p> -->
+
+		<input ng-model="filterText"/>
+
+		<!-- ========== object in array        ===   -->
+		<div ng-repeat="person in filterService | filter: filterText">
+			<h3>{{person.name}}</h3>
+			<a href="mailto:{{person.email}}?subject=Do not send this email. It is just a test!">{{person.email}}</a>
+			<p>{{person.phone}}</p>
+		</div>
+
+		</div>
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
