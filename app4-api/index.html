@@ -2,7 +2,7 @@
 	<body ng-controller="mainCtrl">
 
 		<input ng-model="filterText" style="padding: 20px; font-size: 14px;"/>
-		<a ng-repeat="poki in pokemon" href="{{pokemon.url}}"><p>{{poki.name}}</p></a>
+		<a ng-repeat="poki in pokemon | filter: filterText" href="{{pokemon.url}}"><p>{{poki.name}}</p></a>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="app.js"></script>
