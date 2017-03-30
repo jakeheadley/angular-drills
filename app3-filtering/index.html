@@ -5,9 +5,9 @@
 		<!-- This is just to test app -->
 		<!-- <p>{{test}}</p> -->
 
-		<input ng-model="filterText"/>
+		<input ng-model="filterText" style="padding: 20px; font-size: 14px;"/>
 
-		<!-- ========== object in array        ===   -->
+		<!-- ========== object in array         = filter by model defined in input -->
 		<div ng-repeat="person in filterService | filter: filterText">
 			<h3>{{person.name}}</h3>
 			<a href="mailto:{{person.email}}?subject=Do not send this email. It is just a test!">{{person.email}}</a>
